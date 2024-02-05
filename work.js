@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', function () {
     // Fetch data from JSON and dynamically populate the "work" page
-    fetch('data.json')
+    fetch('work.json')
         .then(response => response.json())
         .then(data => {
             const workContainer = document.getElementById('work');

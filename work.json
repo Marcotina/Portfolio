@@ -1,15 +1,15 @@
 [
     {
-        "title": "Project 1",
+        "title": "The Look, a la Rita",
         "description": "Description for Project 1",
-        "link": "https://www.example.com/project1",
-        "logo": "path/to/logo1.png"
+        "link": "https://www.thelookalarita.github.io",
+        "logo": "images/the Look a la rita.png"
     },
     {
-        "title": "Project 2",
+        "title": "Stardust Box",
         "description": "Description for Project 2",
-        "link": "https://www.example.com/project2",
-        "logo": "path/to/logo2.png"
+        "link": "https://www.stardust-box.github.io",
+        "logo": "images/stardust-box.png"
     },
     {
         "title": "Project 3",

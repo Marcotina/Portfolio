@@ -1,0 +1,128 @@
+/* styles.css */
+body {
+  font-family: 'Roboto';
+  margin: 0;
+  padding: 0;
+  background-color: #2a1434;
+  color: white;
+  background-image: url(images/background.jpg);
+}
+
+header {
+  background-color: transparent;
+  position: fixed;
+  padding: 2rem;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items to the top of the header */
+}
+
+#name-container {
+  display: flex;
+  align-items: flex-start; /* Align items to the top of the header */
+}
+
+.initial {
+  opacity: 0;
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+#initial-M {
+  position: absolute;
+  left: 3px;
+  top: 5px;
+  animation: fadeInUp 1s ease-in forwards; /* Animate M appearing */
+}
+
+#initial-I {
+  position: absolute;
+  left: 21px;
+  top: 35px;
+  opacity: 0; /* Keep I initially invisible */
+  animation: fadeInDown 1s ease-in 1s forwards; /* Animate I sliding down from M */
+}
+
+#name-lines {
+  display: flex;
+  flex-direction: column;
+}
+
+#name-first, #name-last {
+  opacity: 0;
+}
+
+#name-first {
+  position: absolute;
+  top: 20px;
+  left: 33px;
+  animation: slideInRight 1s ease-in 2s forwards; /* Animate 'arc-Anthony' sliding out from M */
+}
+
+#name-last {
+  position: absolute;
+  top: 49px;
+  left: 33px;
+  animation: slideInRight 1s ease-in 2.4s forwards; /* Animate 'mad' sliding out from I */
+}
+
+@keyframes slideInRight {
+  from {
+      opacity: 0;
+      transform: translateX(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+nav{
+  position: fixed;
+  right: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  margin-right: 20px;
+}
+nav a:hover{
+  text-decoration: underline;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+main {
+  padding: 2rem;
+}

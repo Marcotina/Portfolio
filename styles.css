@@ -10,7 +10,7 @@ body {
 
 header {
   background-color: transparent;
-  position: fixed;
+  position: sticky;
   padding: 2rem;
   text-align: left;
   display: flex;

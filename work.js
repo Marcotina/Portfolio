@@ -1,10 +1,10 @@
-// script.js
-
 document.addEventListener('DOMContentLoaded', function () {
     // Fetch data from JSON and dynamically populate the "work" page
     fetch('work.json')
         .then(response => response.json())
         .then(data => {
+            console.log('Fetched data:', data); // Log the fetched data to the console
+
             const workContainer = document.getElementById('work');
             data.forEach(project => {
                 const card = document.createElement('div');

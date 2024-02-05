@@ -69,38 +69,38 @@ header {
 
 @keyframes slideInRight {
   from {
-      opacity: 0;
-      transform: translateX(-20px);
+    opacity: 0;
+    transform: translateX(-20px);
   }
   to {
-      opacity: 1;
-      transform: translateX(0);
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
 @keyframes fadeInUp {
   from {
-      opacity: 0;
-      transform: translateY(-20px);
+    opacity: 0;
+    transform: translateY(-20px);
   }
   to {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 @keyframes fadeInDown {
   from {
-      opacity: 0;
-      transform: translateY(-20px);
+    opacity: 0;
+    transform: translateY(-20px);
   }
   to {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-nav{
+nav {
   position: fixed;
   right: 20px;
 }
@@ -115,9 +115,11 @@ nav li {
   display: inline;
   margin-right: 20px;
 }
-nav a:hover{
+
+nav a:hover {
   text-decoration: underline;
 }
+
 a {
   text-decoration: none;
   color: white;
@@ -125,4 +127,91 @@ a {
 
 main {
   padding: 2rem;
+}
+/* styles.css */
+.card {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+  overflow: hidden; /* Ensure the background color spans the entire width */
+  display: flex; /* Use flexbox for equal height */
+  position: relative; /* Set relative positioning for absolute children */
+}
+
+.card img {
+  width: 100%; /* Set image width to 100% for responsiveness */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 500px; /* Set maximum width for the image */
+  display: block; /* Remove extra space below the image */
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+.card-content {
+  position: absolute;
+  bottom: 0; /* Position text at the bottom of the card */
+  width: 100%; /* Full width for the text */
+  box-sizing: border-box;
+  padding: 20px; /* Add padding to keep text away from edges */
+  color: white; /* Set a default font color (can be overridden by JSON) */
+}
+
+.card-title {
+  font-size: 1.5rem; /* Set font size for the project title */
+}
+
+.card-description {
+  margin-top: 10px; /* Add space between title and description */
+  font-size: 1rem; /* Set font size for the project description */
+  max-width: 400px; /* Set maximum width for the description text */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card.left img {
+  left: 0;
+  margin-right: 20px;
+}
+
+.card.right img {
+  right: 0;
+  margin-left: 20px;
+}
+
+.card.left .card-content {
+  right: 0;
+  text-align: left; /* Text on the left for left-positioned cards */
+}
+
+.card.right .card-content {
+  left: 0;
+  text-align: right; /* Text on the right for right-positioned cards */
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+  }
+
+  .card img {
+    max-width: 100%; /* Full width for smaller screens */
+  }
+
+  .card-content {
+    width: 100%; /* Full width for the text */
+    text-align: left; /* Adjust text alignment for smaller screens */
+    position: relative; /* Remove absolute positioning for text */
+    padding: 20px; /* Add padding to keep text away from edges */
+    background: rgba(0, 0, 0, 0.7); /* Background color with less opacity */
+  }
+
+  .card.left .card-content,
+  .card.right .card-content {
+    text-align: left; /* Text on the left for both positions on smaller screens */
+  }
+
+  .card-title,
+  .card-description {
+    text-align: left; /* Align text to the left on smaller screens */
+  }
 }

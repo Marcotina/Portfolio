@@ -1,10 +1,10 @@
+// script.js
+
 document.addEventListener('DOMContentLoaded', function () {
     // Fetch data from JSON and dynamically populate the "work" page
     fetch('work.json')
         .then(response => response.json())
         .then(data => {
-            console.log('Fetched data:', data); // Log the fetched data to the console
-
             const workContainer = document.getElementById('work');
             data.forEach(project => {
                 const card = document.createElement('div');
@@ -15,17 +15,21 @@ document.addEventListener('DOMContentLoaded', function () {
                 logo.alt = project.title;
 
                 const info = document.createElement('div');
+                info.classList.add('card-content');
+
                 const title = document.createElement('h2');
-                title.textContent = project.title;
+                title.classList.add('card-title');
+                const titleLink = document.createElement('a');
+                titleLink.href = project.link;
+                titleLink.textContent = project.title;
+                title.appendChild(titleLink);
+
                 const description = document.createElement('p');
+                description.classList.add('card-description');
                 description.textContent = project.description;
-                const link = document.createElement('a');
-                link.href = project.link;
-                link.textContent = 'Visit Website';
 
                 info.appendChild(title);
                 info.appendChild(description);
-                info.appendChild(link);
 
                 card.appendChild(logo);
                 card.appendChild(info);

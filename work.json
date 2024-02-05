@@ -1,20 +1,31 @@
+
 [
     {
-        "title": "The Look, a la Rita",
-        "description": "Description for Project 1",
-        "link": "https://www.thelookalarita.github.io",
-        "logo": "images/the Look a la rita.png"
+      "title": "The Look, à la Rita",
+      "description": "Website for prices relating to a beauty salon and its services, updating any new services as well as showcasing pictures for each service.",
+      "link": "https://www.thelookalarita.github.io",
+      "logo": "images/the Look a la rita.png",
+      "backgroundColor": "transparent",
+      "fontColor": "#ffffff",
+      "position": "left"
     },
     {
-        "title": "Stardust Box",
-        "description": "Description for Project 2",
-        "link": "https://www.stardust-box.github.io",
-        "logo": "images/stardust-box.png"
+      "title": "Stardust Box",
+      "description": "Description for Project 2",
+      "link": "https://www.stardust-box.github.io",
+      "logo": "images/stardust-box.png",
+      "backgroundColor": "#transparent",
+      "fontColor": "#ffffff",
+      "position": "right"
     },
     {
-        "title": "Project 3",
-        "description": "Description for Project 3",
-        "link": "https://www.example.com/project3",
-        "logo": "path/to/logo3.png"
+      "title": "Project 3",
+      "description": "Description for Project 3",
+      "link": "https://www.example.com/project3",
+      "logo": "images/the Look a la rita.png",
+      "backgroundColor": "#transparent",
+      "fontColor": "#ffffff",
+      "position": "left"
     }
-]
+  ]
+  
